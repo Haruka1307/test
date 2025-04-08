@@ -25,6 +25,7 @@ def test_8gpu_performance():
         _ = model(inputs[0])
 
     # 正式测试
+    print("start testing~")
     start_time = time.time()
     for i in range(10):  # 运行10次迭代
         outputs = model(inputs[i % num_gpus])  # 轮询使用不同GPU的数据
